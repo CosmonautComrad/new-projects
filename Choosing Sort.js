@@ -1,21 +1,26 @@
-var mas = [0,19,27,43,1,5,94,88,101];
-var min;
-var tmp;
-var index;
-for(var i = 0; i < mas.length; i++)
+function ChoosingSort(mas)
 {
-	min = mas[i];
-	index = i;
-	for(var j = i; j < mas.length; j++)
+	var min;
+	var tmp;
+	var index;
+	for(var i = 0; i < mas.length; i++)
 	{
-		if(mas[j] < min)
+		min = mas[i];
+		index = i;
+		for(var j = i; j < mas.length; j++)
 		{
-			min = mas[j];
-			index = j;
+			if(mas[j] < min)
+			{
+				min = mas[j];
+				index = j;
+			}
 		}
+		tmp = mas[i];
+		mas[i] = mas[index];
+		mas[index] = tmp;
 	}
-	tmp = mas[i];
-	mas[i] = mas[index];
-	mas[index] = tmp;
+	console.log(mas);
+	return mas;
 }
-console.log(mas);
+arr = [19,90,5,11,0,54,9,10]
+ChoosingSort(arr);
