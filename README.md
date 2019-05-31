@@ -1,2 +1,2 @@
 # new-projects
-Doubt if someone will ever reads this
+Doubt if someone will ever read this
